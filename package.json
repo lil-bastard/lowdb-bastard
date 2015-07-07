@@ -1,0 +1,16 @@
+{
+  "name": "lowdb-bastard",
+  "version": "1.0.0",
+  "description": "A data bastard for LowDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Paul Navasard",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^2.9.32",
+    "lowdb": "^0.10.1",
+    "uuid": "^2.0.1"
+  }
+}
