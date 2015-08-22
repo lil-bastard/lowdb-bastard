@@ -2,6 +2,7 @@ var low = require('lowdb');
 var uuid = require('uuid');
 var Promise = require('bluebird');
 
+
 function LowBastard(filename) {
   this.db = low(filename);
 }
@@ -40,7 +41,7 @@ LowBastard.prototype.findOne = function(tableName, id, user) {
 LowBastard.prototype.find = function(tableName, user, filter, sort) {
   return new Promise(function(resolve, reject) {
     if(this.db.object[tableName]) {
-      resolve(this.db(table).find(filter));
+      resolve(this.db(tableName).where(filter));
     } else {
       resolve([]);
     }
